@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Gauge Canbus Simulator</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/gauge.min.js"></script>
+
+
+</head>
+
+<body>
+    <canvas data-type="radial-gauge" data-width="400" data-height="400" data-units="false" data-title="x1000RPM"
+        data-value="0" data-min-value="0" data-max-value="8000"
+        data-major-ticks="0,1,2,3,4,5,6,7,8" data-minor-ticks="2" data-stroke-ticks="true"
+        data-highlights='[
+            
+            { "from": 6000, "to": 8000, "color": "rgba(255,0,0,.25)" }
+        ]' data-color-plate="#222" data-color-major-ticks="#ADD8E6" data-color-minor-ticks="#ADD8E6"
+        data-color-title="#ADD8E6" data-color-units="#ADD8E6" data-color-numbers="#eee"
+        data-color-needle-start="rgba(240, 128, 128, 1)" data-color-needle-end="rgba(255, 160, 122, .9)"
+        data-value-box="false" data-animation-rule="bounce" data-animation-duration="500" data-font-value="Led"
+        data-animated-value="true" data-ticks-angle= "190" data-color-needle-circle-inner="black" data-color-needle-circle-outer-end="black"
+        data-color-needle-circle-outer="black" data-font-title-size="13" data-color-border-middle="#696969" data-color-border-middle-end="#696969"
+        data-color-border-inner="#696969" data-color-border-inner-end="#696969" data-color-border-outer="#696969" data-color-border-outer-end="#696969"
+        ></canvas>
+    <canvas data-type="radial-gauge" data-width="400" data-height="400" data-units="false" data-title="MPH"
+        data-value="0" data-min-value="0" data-max-value="140"
+        data-major-ticks="0,20,40,60,80,100,120,140" data-minor-ticks="2" data-stroke-ticks="true"
+        data-highlights='[
+            {  }
+        ]' data-color-plate="#222" data-color-major-ticks="#ADD8E6" data-color-minor-ticks="#ADD8E6"
+        data-color-title="#ADD8E6" data-color-units="#ADD8E6" data-color-numbers="#eee"
+        data-color-needle-start="rgba(240, 128, 128, 1)" data-color-needle-end="rgba(255, 160, 122, .9)"
+        data-value-box="false" data-animation-rule="bounce" data-animation-duration="500" data-font-value="Led"
+        data-animated-value="true" data-color-needle-circle-inner="black" data-color-needle-circle-outer-end="black"
+        data-color-needle-circle-outer="black" data-font-title-size="13" data-color-border-middle="#696969" data-color-border-middle-end="#696969"
+        data-color-border-inner="#696969" data-color-border-inner-end="#696969" data-color-border-outer="#696969" data-color-border-outer-end="#696969"></canvas>
+     
+    <script src="/index.js"></script>
+</body>
+
+</html>
