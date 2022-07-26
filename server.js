@@ -11,6 +11,8 @@ var carInfo = {};
 carInfo.speed = 0
 carInfo.revs = 0
 
+carInfo.fuel = 0   
+
 app.use(express.static(__dirname + '/html'));
 app.use('/scripts', express.static(__dirname + '/node_modules/canvas-gauges/'));
 
@@ -28,7 +30,7 @@ channel.addListener("onMessage", function(msg) {
     carInfo.revs = msg.data.readUIntBE(0, 4)
     carInfo.speed = msg.data.readUIntBE(4, 2)
 
-    
+    carInfo.fuel = msg.data.readUIntBE(6, 2)
     
     console.log(carInfo)
 })
