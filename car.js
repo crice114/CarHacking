@@ -10,6 +10,7 @@ var msg = {
 var speed = 0
 var revs = 0
 var up = true
+var fuel = 500 
 
 setInterval(() => {
     var out = {}
@@ -17,6 +18,7 @@ setInterval(() => {
     if(speed < 113) {
         speed = speed + 1
         revs = revs + 240
+        fuel = fuel - 1 
     } else {
         if(up) {
             revs = revs + 100
@@ -25,7 +27,7 @@ setInterval(() => {
             revs = revs - 100
             up = true
         }
-
+        fuel = fuel - 1
     }
 
 
@@ -33,9 +35,17 @@ setInterval(() => {
         revs = 1000
     }
     
+    if(fuel == 0) {                                                          /////////////////////////////////////////////////////////////
+        speed = 0
+        revs = 0  
+        fuel = 0                                               ////////////////////////////////////////////////////////////
+    }  
 
     buff.writeUIntBE(revs, 0, 4)
     buff.writeUIntBE(speed, 4, 2)
+    
+    buff.writeUIntBE(fuel, 6, 2)  
+    
     console.log(buff)
     out.id = msg.id
     out.data = buff
