@@ -8,7 +8,7 @@
 
 ## About
 
-This project creates a car speedometer and rev gauge canbus simulator. The gauges are modelled after the Toyota Tacoma 2020 model gauges, including a max speed of 113 mph. The project runs on a Raspberry Pi and simulates a car outputting revs and speed, and displays via the frond end using nodejs and socketcan. The Pi model I am using is Raspberry Pi 3- B model. The server is created using express, socket.io, socketcan and the gauges are created with the help of an existing canvas-gauge template. Project modelled after rhysmorgan134/Can-App
+This project creates a car speedometer, rev gauge and fuel gauge canbus simulator. The gauges are modelled after the Toyota Tacoma 2020 model gauges, including a max speed of 113 mph. The project runs on a Raspberry Pi and simulates a car outputting revs and speed, and fuel consumption(this is shown at a rate that is sped up for functional timing purposes) and displays via the frond end using nodejs and socketcan. When the fuel gauge reaches 0, the simulation ends and all gauges are reset.The Pi model I am using is Raspberry Pi 3 B model. The server is created using express, socket.io, socketcan and the gauges are created with the help of an existing canvas-gauge template. Project modelled after rhysmorgan134/Can-App
 
 
 ## Installation
