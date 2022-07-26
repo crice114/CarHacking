@@ -1,5 +1,6 @@
 # ReadME
 
+![Gauges screenshot](https://user-images.githubusercontent.com/79558669/180919193-4b0581e3-ed1f-457c-8e1e-63e7c2ea8a78.png)
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/crice114/CarHacking)
