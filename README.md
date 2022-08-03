@@ -92,7 +92,8 @@ node server.js
 # starts sending car data to gauges in terminal #2
 node car.js
 
-
+# to hack the car gauges, do a cansend to the virtual canbus ID(found by cansniffer) and send in 16 bits of data to manipulate gauges.
+cansend vcan0 1F4#AAAAAAAAAAAAAAAA
 ```
 ## Acknowledgement
 Project concept and execution inspired by rhysmorgan134/Can-App
